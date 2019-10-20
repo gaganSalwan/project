@@ -1,0 +1,49 @@
+
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Create New Account</title>
+</head>
+
+<body>
+  <div class="main">
+    <p class="sign" align="center">Create New Account</p>
+    <form class="form1" name="myForm" >
+      <input class="un " type="text" align="center" name ="Username" placeholder="Username" required="">
+      <input class="un " type="text" align="center" name ="Email" placeholder="Email" required="">
+      <input class="pass" type="password" align="center" name ="Password" placeholder="Password" required="">
+      <button type="submit" class="submit" onclick = "return(validate());><a align="center">Register</a></button>
+
+      <script type="text/javascript">
+        function validate() {
+      
+         if( document.myForm.Username.value < 8) {
+            alert("Password must contain at least 8 characters!");
+            document.myForm.Username.focus() ;
+            return false;
+         }
+
+            re = /^\w+$/;
+         if(!re.test(document.myForm.Password.value)) {
+            alert("Password must contain only letters, numbers and underscores!");
+            document.myForm.Password.focus() ;
+            return false;
+
+         }
+         return( true );
+      }
+      </script>
+
+            
+                
+    </div>
+     
+</body>
+
+</html>
+
